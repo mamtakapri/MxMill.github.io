@@ -82,8 +82,8 @@ p{
 	font-size: 14px;
 	font-family: "Changa", sans-serif;
 }
-.navbar_logo_center{
-	
+.navbar_logo_center img{
+	width: 100%;
 }
 .nav_other_option{
 	display: flex!important;
@@ -467,6 +467,12 @@ p{
     left: 0;
     align-items: center;
 }
+.boxes .box_row{
+	box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
 .boxes .box{
     float: left;
     width: 31%;
@@ -506,9 +512,6 @@ p{
 }	
 
 /* how it works */	
-.how_it_work{
-	margin-top: 35rem;
-}
 
 .how_it_work_area, .what_get_area{
 	padding-top: 120px;
@@ -955,18 +958,25 @@ p{
 	position: relative;
 	padding-top: 0!important;
 }
-
-.stake_area .stake_take_shape{
+.stake_area .app_container{
+	float:left;
+}
+.stake_area .stake_take_shape {
 	top: 0;
     left: 0;
     position: absolute;
 	display: none!important;
 }
+.stake_row {
+	display: flex;
+	
+}
 .stake_bg {
+	width: 50%;
     background: linear-gradient(135deg,#3A285C 0%,#1A093A 100%);
     border-radius: 30px;
     position: relative;
-    z-index: 1;
+    margin: 10px
 }
 .stake_bg .content_row{
 	align-items: flex-end!important;
@@ -981,18 +991,22 @@ p{
     width: 33.33333333%;
 }
 .stake_content{
-	padding: 100px 60px;
+	padding: 30px 50px;
 }
 .stake_title{
 	margin-bottom: 20px;
 	font-size: 13px;
 }
+.stake_img img{
+	width: 80%;
+}
 .stake_content h2{
-	font-size: 48px;
+	font-size: 35px;
     margin-bottom: 25px;
+	margin-top: 10px;
 }
 .stake_content p{
-	font-size: 16px;
+	font-size: 14px;
     margin-bottom: 15px;
     line-height: 1.8;
 }
@@ -1017,6 +1031,7 @@ p{
     z-index: 1;
     padding-top: 150px;
     padding-bottom: 120px;
+	margin-top: 65em;
 }
 .footer_area .app_container .content_row{
 	justify-content: center!important;
@@ -1053,9 +1068,10 @@ p{
 .col_2-12 .logo{
 	text-align: center;
 }
-.col_2-12 .logo a img{
-	width: 100px;
-	height: 96px;
+.col_2-12 .logo a{
+	position: absolute;
+    left: 260px;
+    top: 40px;
 }
 .single_footer .social_link {
     text-align: end;
