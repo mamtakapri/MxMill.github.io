@@ -62,10 +62,28 @@ p{
     overflow: hidden;
 	z-index: 999;
 }
-.navbar{
-	
+.navbar_expand .navbar_brand{
+	display: none;
+	font-size: inherit;
+    line-height: 1;
+    padding: 0;
 }
-
+.navbar_expand .navbar_toggler{
+	display: none;
+	cursor: pointer;
+}
+.nav_div_1{
+	width: 40%;
+}
+.nav_div_2{
+	width: 15%;
+}
+.nav_div_3{
+	width: 25%;
+}
+.nav_div_4{
+	width: 20%;
+}
 .navbar_collapse{
 	display: flex;
 	flex-grow: 1;
@@ -75,26 +93,33 @@ p{
 	display: flex;
 	list-style: none;
 	padding: 0.5rem 0 0.5rem 0;
-	
+	justify-content: space-between;
 }
 .navbar_nav_item{
-	margin-right: 20px;
+	
 	font-size: 14px;
 	font-family: "Changa", sans-serif;
 }
+.navbar_logo_center{
+	margin-bottom: -50px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
 .navbar_logo_center img{
 	width: 100%;
+	height: auto;
+	transform: scale(1.5);
 }
 .nav_other_option{
 	display: flex!important;
 	align-items: center!important;
-	
+	place-content: flex-end;
 	
 }
 .nav_option_item{
-	margin-left: 0;
 	box-sizing: border-box;
-	margin-left: 30px;
+	margin-left: 10px;
 	
 }
 .default_btn{
@@ -166,7 +191,7 @@ p{
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 6px;
     text-decoration: none;
 	position: relative;
 }
@@ -212,22 +237,41 @@ p{
     margin-left: auto;
 	
 }
-.banner_content{
+.banner_content {
 	box-sizing: border-box;
 	text-align: center;
     margin-left: 6.4rem;
     margin-right: 6.4rem;
-	font-size: 30px;
-	font-weight: 800;
+	font-size: 25px;
+	font-weight: 400;
     margin-bottom: 25px;
+}
+.banner_content .banner_heading span{
+	font-size: 35px;
 }
 .banner_heading{
 	padding: 0 2rem;
-	line-height: 6rem;
+	line-height: 4rem;
 }
 .banner_btn{
 	margin-top: 40px;
 }
+.owl-dots{
+	display: none;
+}
+.owl-prev, .owl-next {
+        width: 15px;
+        height: 100px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        display: block !important;
+        border:0px solid black;
+    }
+    .owl-prev { left: -20px; }
+    .owl-next { right: -20px; }
+    .owl-prev i, .owl-next i {transform : scale(2,5); color: #ccc;}
+	
 .btn_active{
 	z-index: 1;
 	text-decoration: none;
@@ -392,11 +436,18 @@ p{
 }
 .about_img_container, .about_content_container{
 	display: inline-block;
-	width: 48%;
+	width: 47%;
 	float: left;
+	padding: 0 5px;
+}
+.about_img img{
+	width: 100%;
+    margin-left: -8%;
+	transform: scaleY(1.5);
+	margin-top: 100px;
 }
 .about_content{
-	margin-top: 3rem;
+	margin-top: 1rem;
 }
 .top_title{
     display: inline-block;
@@ -411,15 +462,15 @@ p{
 .title_head{
 	font-family: fantasy;
     font-weight: 400;
-    font-size: 55px;
-	letter-spacing: 0.1em
+    font-size: 40px;
+	letter-spacing: 0.2rem
 }
 .about_para{
-	font-size: 16px;
+	font-size: 12px;
 	color: #beb8cc;
 	margin-bottom: 15px;
-	line-height: 1.5;
-    letter-spacing: 0.02rem;
+	line-height: 1;
+    letter-spacing: 0.08rem;
 }
 .about_social{
 	margin-top: 20px;
@@ -441,6 +492,9 @@ p{
     background: #ffffff;
     transition: 0.5s;
     box-shadow: 0 2px 30px #0000000f;
+}
+.i_disc img{
+	width: 18px;
 }
 .key_features{
 	display: block;
@@ -581,6 +635,7 @@ p{
 }
 
 .how_it_work_tabs .tab_img img{
+	width: 100%;
 	border-radius: 65px;
 }
 
@@ -1126,9 +1181,36 @@ p{
   }
 }
 
+/*Responsive code*/
+@media only screen and (min-width: 992px) and (max-width: 1199px)
+{
+	.single-features.style-two[_ngcontent-ng-c4169024703] img[_ngcontent-ng-c4169024703] {
+		max-width: 100%;
+		margin-bottom: 25px;
+	}
+}
 
-/* Styles for the navigation bar when in responsive mode */
-@media screen and (max-width: 600px) {
+@media only screen and (min-width: 768px) and (max-width: 991px)
+{
+	body{
+		font-size: 14px;
+	}
+	.navbar_container, .app_container {
+		max-width: 720px
+	}
+	.navbar_area {
+		padding-top: 12px;
+		padding-bottom: 12px;
+	}
+}
+
+
+@media screen and (min-width: 576px) and (max-width: 768.9) {
+	
+	.navbar_container, .app_container{
+		max-width: 540px;
+	}
+	
     .navbar_nav_item a {
         float: none;
         display: block;
@@ -1136,6 +1218,7 @@ p{
     }
 }
 
+/*animation*/
 @keyframes rotation {
   0%{
 	  transform: rotate(0);
