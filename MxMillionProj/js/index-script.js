@@ -64,11 +64,34 @@ const initSlider = () => {
 window.addEventListener("resize", initSlider);
 window.addEventListener("load", initSlider);
 
-$(".category-wrapper").owlCarousel({
-     items : 4,
-     loop  : true,
-     margin : 30,
-     nav    : true,
-     smartSpeed :900,
-     navText : ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"]
-   });
+$(document).ready(function(){
+	$(".insideBox2_inv").hide();
+	$(document).on('click', ".read_more", function(){
+		var moreLessBtn=$(".insideBox2_inv").is(":visible")?'READ MORE':'READ LESS';
+		$(this).text(moreLessBtn);
+		$(this).parent(".box").find(".insideBox2_inv").toggle();
+		$(this).parent(".box").find(".insideBox2").toggle();
+	});
+});
+
+
+function toggleTabs(id){
+	$(".nav_tab").removeClass("active");
+	$("#"+id).addClass("active");
+	if(id=="activetab1"){
+		$("#tab1").show();
+		$("#tab2").hide();
+		$("#tab3").hide();
+	}
+	else if(id=="activetab2"){
+		$("#tab2").show();
+		$("#tab1").hide();
+		$("#tab3").hide();
+	}
+	else if(id=="activetab3"){
+		$("#tab3").show();
+		$("#tab2").hide();
+		$("#tab1").hide();
+	}
+}
+
