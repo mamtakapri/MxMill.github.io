@@ -22,6 +22,7 @@
 </head>
 <body>
 <div class="mave_app">
+<!--Navigation Section-->
 <div class="app_navbar navbar_sticky">
 	<div class="navbar_area">
 		<div class="navbar_container">
@@ -29,30 +30,37 @@
 				<a class="navbar_brand" href="#home">
 					<img src="images/logo/logo1.png" alt="logo" />
 				</a>
-				<button type="button" class="navbar_toggler">
-					<span class="burger_menu">
-						<span class="top_bar"></span>
-						<span class="middle_bar"></span>
-						<span class="bottom_bar"></span>
-					</span>
-				</button>
+				
+				<input type="checkbox" id="menuBar">
+					<label for="menuBar">
+						<i class="fa fa-bars"></i>
+					</label>
 				<div class="navbar_collapse">
 					<div class="nav_div_1">
 						<ul class="navbar_nav">
 							<li class="navbar_nav_item">
-								<a href="#home">Home <i class="fas fa-angle-down"></i></a>
+								<a href="#home">Home</a>
 								<ul></ul>
 							</li>
 							<li class="navbar_nav_item">
 								<a href="#aboutUs">About Us</a>
 							</li>
 							<li class="navbar_nav_item">
-								<a href="#features">Features <i class="fas fa-angle-down"></i></a>
+								<a href="#features">Features</i></a>
 								<ul></ul>
 							</li>
-							<li class="navbar_nav_item">
-								<a href="#projects">Projects <i class="fas fa-angle-down"></i></a>
-								<ul></ul>
+							<li class="navbar_nav_item" id="navItem" >
+								<a href="#projects" class="dropdownLink">Projects <i class="fas fa-angle-down"></i>
+									<ul class="navDropDown">
+										<li>Metaverse City</li>
+										<li>NFT Marketplace</li>
+										<li>Play2Earn Games</li>
+										<li>3D Billboards(Real & Virtual)</li>
+										<li>Virtual Event Platform - (Coming Soon)</li>
+										<li>Farm to Fortune (Virtual Faming Linked with Real World Assets) - (Coming Soon)</li>
+									</ul>
+								</a>
+								
 							</li>
 							
 						</ul>
@@ -65,12 +73,21 @@
 					<div class="nav_div_3">
 						<ul class="navbar_nav">
 							<li class="navbar_nav_item">
-								<a href="#pages">Pages <i class="fas fa-angle-down"></i></a>
-								<ul></ul>
+								<a href="#earn" class="dropdownLink">Earn <i class="fas fa-angle-down"></i>
+									<ul class="navDropDown">
+										<li>NFT Staking</li>
+										<li>Referral Income</li>
+										<li>Lottery</li>
+										<li>DAO Voting</li>
+										<li>MXMDAO Token</li>
+									</ul>
+								</a>
+								
 							</li>
 							<li class="navbar_nav_item">
-								<a href="#blogs">Blog <i class="fas fa-angle-down"></i></a>
-								<ul></ul>
+								<a href="#dao">DAO</a>
+								<ul>
+								</ul>
 							</li>
 							<li class="navbar_nav_item">
 								<a href="#contactUs">Contact Us</a>
@@ -338,6 +355,139 @@
 		</div>
 	</div>
 </div>
+
+<!--Utility section-->
+<div class="utility_section">
+	<div class="utility_area">
+		<div class="app_container">
+			<div class="section_title">
+				<span class="top_title">OMMI Utility</span>
+				<h2 class="title_head">MX Million Metaverse ecosystem</h2>
+			</div>
+
+				<div class="utilityBoxContainer">
+					<div class="utilityBox">
+						<div class="utilityBoxIcon">
+							<img src="images/how-it-works/airdrop.png" />
+						</div>
+						<div class="utilityBoxContent">
+							<h1 class="utilityBoxHead">Utility Token</h1>
+							<span class="utilityBoxSubHead">In-Platform Use</span>
+							<p class="utilityBoxPara">
+								MXMDAO can be used within the metaverse for various purposes, such as purchasing virtual land, properties, items, or services.
+							</p>
+							<span class="utilityBoxSubHead">Transaction Medium</span>
+							<p class="utilityBoxPara">
+								Users can use MXMDAO to facilitate transactions and payments within the metaverse, ensuring a seamless virtual economy.
+							</p>
+							<div class="top_title read_more">READ MORE</div>
+						</div>
+					</div>
+					<div class="utilityBox">
+						<div class="utilityBoxIcon">
+							<img src="images/how-it-works/bitcoin.png" />
+						</div>
+						<div class="utilityBoxContent">
+							<h1 class="utilityBoxHead">Governance Token</h1>
+							<span class="utilityBoxSubHead">Decision-Making</span>
+							<p class="utilityBoxPara">
+								MXMDAO holders have the power to participate in governance decisions within the metaverse. This includes voting on proposals, upgrades, and community initiatives
+							</p>
+							<span class="utilityBoxSubHead">Community-Led</span>
+							<p class="utilityBoxPara">
+								It's a decentralized autonomous organization (DAO), meaning the community has a say in the direction and development of the metaverse.
+							</p>
+							<div class="top_title read_more">READ MORE</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="utilityBoxContainer">
+					<div class="utilityBox">
+						<div class="utilityBoxIcon">
+							<img src="images/how-it-works/blockchain.png" />
+						</div>
+						<div class="utilityBoxContent">
+							<h1 class="utilityBoxHead">Staking and Rewards</h1>
+							<span class="utilityBoxSubHead">Staking</span>
+							<p class="utilityBoxPara">
+								Users can stake MXMDAO tokens to earn rewards or participate in yield farming programs.
+							</p>
+							
+							<span class="utilityBoxSubHead">Farming</span>
+							<p class="utilityBoxPara">
+								In some cases, the token can be used for yield farming or liquidity provision to earn additional tokens or rewards.
+							</p>
+							<div class="top_title read_more">READ MORE</div>
+						</div>
+					</div>
+					<div class="utilityBox">
+						<div class="utilityBoxIcon">
+							<img src="images/how-it-works/cardano.png" />
+						</div>
+						<div class="utilityBoxContent">
+							<h1 class="utilityBoxHead">Asset Ownership</h1>
+							<span class="utilityBoxSubHead">Virtual Real Estate</span>
+							<p class="utilityBoxPara">
+								MXMDAO tokens can represent ownership of virtual land, properties, or assets within the metaverse, allowing users to participate in the virtual real estate market.
+							</p>
+							<div class="top_title read_more">READ MORE</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="utilityBoxContainer">
+					<div class="utilityBox">
+						<div class="utilityBoxIcon">
+							<img src="images/how-it-works/dogecoin.png" />
+						</div>
+						<div class="utilityBoxContent">
+							<h1 class="utilityBoxHead">NFT Integration</h1>
+							<span class="utilityBoxSubHead">NFT Sales</span>
+							<p class="utilityBoxPara">
+								The MX Million Metaverse may enable the creation and sale of NFTs (non-fungible tokens) representing virtual assets. MXMDAO tokens can be used for these purchases.
+							</p>
+							<div class="top_title read_more">READ MORE</div>
+						</div>
+					</div>
+					<div class="utilityBox">
+						<div class="utilityBoxIcon">
+							<img src="images/how-it-works/etherium.png" />
+						</div>
+						<div class="utilityBoxContent">
+							<h1 class="utilityBoxHead">Trading and Exchange</h1>
+							<span class="utilityBoxSubHead">Listed on Exchanges</span>
+							<p class="utilityBoxPara">
+								MXMDAO may be listed on cryptocurrency exchanges, allowing users to buy, sell, or trade the token on open markets.
+							</p>
+							<div class="top_title read_more">READ MORE</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="utilityBoxContainer">
+					<div class="utilityBox un">
+						<div class="utilityBoxIcon">
+							<img src="images/how-it-works/ripple.png" />
+						</div>
+						<div class="utilityBoxContent">
+							<h1 class="utilityBoxHead">Development Funding</h1>
+							<span class="utilityBoxSubHead">Funds for Growth</span>
+							<p class="utilityBoxPara">
+								Part of the token's use may involve funding development and expansion of the metaverse ecosystem.
+							</p>
+							<div class="top_title read_more">READ MORE</div>
+						</div>
+					</div>
+					
+					
+				</div>
+				
+			
+		</div>
+	</div>
+</div>
+
 
 <!-- how it works section -->
 <div class="how_it_work">
@@ -760,11 +910,48 @@
 						<div class="col_8-12">
 							<div class="stake_content">
 								<span class="stake_title top_title">STAKE NOW</span>
-								<h2 class="title_head">Stake Now To Earn Rewards</h2>
-								<p>
-									A Gamified Marketplace Dedicated To The Metaverse And Gaming Assets. The Metaverse Marketplace Allows Users To Trade, Auction, And Rent Virtual Ownership Assets From Various Metaverse And Gaming Projects.
-								</p>
-								<a class="btn_active" href="#stake_now"> Stake Now </a>
+								<h2 class="title_head">Lottery !! Lottery !!</h2>
+								
+								<p id="message"></p>
+								<table>
+								  <tr>
+									<td>
+										<p>Last Winner Address:</p>
+									</td>
+									<td>
+										<span id="lastWinnerAddress"></span>
+									</td>
+								  </tr>
+								  <tr>
+									<td>
+										<p>Remaining Time: </p>
+									</td>
+									<td>
+										<p id="remainingTime">
+											<span id="hours">00</span>:
+											<span id="minutes">00</span>:
+											<span id="seconds">00</span>
+										</p>
+									</td>
+								  </tr>
+								  <tr>
+									<td>
+										<p id="buyerTickets">Tickets with you: </p>
+									</td>
+									<td>
+										<p><span id="ticketCount"></span></p>
+									</td>
+								  </tr>
+								  <tr>
+									<td><p>Winner Tokens: </p></td>
+									<td><p><span id="winnerTokens"></span></p></td>
+								  </tr>
+								  
+								</table>
+								<button class="btn_active button-85" onclick="buyTickets()">Buy Tickets</button>
+								
+								<button class="btn_active button-49" onclick="withdrawWinnings()" id="withdrawButton" style="display:none;">Withdraw Winnings</button>
+								
 							</div>
 						</div>
 						<div class="col_4-12">
@@ -780,11 +967,48 @@
 						<div class="col_8-12">
 							<div class="stake_content">
 								<span class="stake_title top_title">Airdrop</span>
-								<h2 class="title_head">Stake Now To Earn Rewards</h2>
-								<p>
-									A Gamified Marketplace Dedicated To The Metaverse And Gaming Assets. The Metaverse Marketplace Allows Users To Trade, Auction, And Rent Virtual Ownership Assets From Various Metaverse And Gaming Projects.
-								</p>
-								<a class="btn_active" href="#stake_now"> Stake Now </a>
+								<h2 class="title_head">Lottery !! Lottery !!</h2>
+								
+								<p id="message"></p>
+								<table>
+								  <tr>
+									<td>
+										<p>Last Winner Address:</p>
+									</td>
+									<td>
+										<span id="lastWinnerAddress"></span>
+									</td>
+								  </tr>
+								  <tr>
+									<td>
+										<p>Remaining Time: </p>
+									</td>
+									<td>
+										<p id="remainingTime">
+											<span id="hours">00</span>:
+											<span id="minutes">00</span>:
+											<span id="seconds">00</span>
+										</p>
+									</td>
+								  </tr>
+								  <tr>
+									<td>
+										<p id="buyerTickets">Tickets with you: </p>
+									</td>
+									<td>
+										<p><span id="ticketCount"></span></p>
+									</td>
+								  </tr>
+								  <tr>
+									<td><p>Winner Tokens: </p></td>
+									<td><p><span id="winnerTokens"></span></p></td>
+								  </tr>
+								  
+								</table>
+								<button class="btn_active button-85" onclick="buyTickets()">Buy Tickets</button>
+								
+								<button class="btn_active button-49" onclick="withdrawWinnings()" id="withdrawButton" style="display:none;">Withdraw Winnings</button>
+								
 							</div>
 						</div>
 						<div class="col_4-12">
@@ -802,11 +1026,48 @@
 						<div class="col_8-12">
 							<div class="stake_content">
 								<span class="stake_title top_title">Lottery</span>
-								<h2 class="title_head">Stake Now To Earn Rewards</h2>
-								<p>
-									A Gamified Marketplace Dedicated To The Metaverse And Gaming Assets. The Metaverse Marketplace Allows Users To Trade, Auction, And Rent Virtual Ownership Assets From Various Metaverse And Gaming Projects.
-								</p>
-								<a class="btn_active" href="#stake_now"> Stake Now </a>
+								<h2 class="title_head">Lottery !! Lottery !!</h2>
+								
+								<p id="message"></p>
+								<table>
+								  <tr>
+									<td>
+										<p>Last Winner Address:</p>
+									</td>
+									<td>
+										<span id="lastWinnerAddress"></span>
+									</td>
+								  </tr>
+								  <tr>
+									<td>
+										<p>Remaining Time: </p>
+									</td>
+									<td>
+										<p id="remainingTime">
+											<span id="hours">00</span>:
+											<span id="minutes">00</span>:
+											<span id="seconds">00</span>
+										</p>
+									</td>
+								  </tr>
+								  <tr>
+									<td>
+										<p id="buyerTickets">Tickets with you: </p>
+									</td>
+									<td>
+										<p><span id="ticketCount"></span></p>
+									</td>
+								  </tr>
+								  <tr>
+									<td><p>Winner Tokens: </p></td>
+									<td><p><span id="winnerTokens"></span></p></td>
+								  </tr>
+								  
+								</table>
+								<button class="btn_active button-85" onclick="buyTickets()">Buy Tickets</button>
+								
+								<button class="btn_active button-49" onclick="withdrawWinnings()" id="withdrawButton" style="display:none;">Withdraw Winnings</button>
+								
 							</div>
 						</div>
 						<div class="col_4-12">
@@ -822,11 +1083,48 @@
 						<div class="col_8-12">
 							<div class="stake_content">
 								<span class="stake_title top_title">Referral Income</span>
-								<h2 class="title_head">Stake Now To Earn Rewards</h2>
-								<p>
-									A Gamified Marketplace Dedicated To The Metaverse And Gaming Assets. The Metaverse Marketplace Allows Users To Trade, Auction, And Rent Virtual Ownership Assets From Various Metaverse And Gaming Projects.
-								</p>
-								<a class="btn_active" href="#stake_now"> Stake Now </a>
+								<h2 class="title_head">Lottery !! Lottery !!</h2>
+								
+								<p id="message"></p>
+								<table>
+								  <tr>
+									<td>
+										<p>Last Winner Address:</p>
+									</td>
+									<td>
+										<span id="lastWinnerAddress"></span>
+									</td>
+								  </tr>
+								  <tr>
+									<td>
+										<p>Remaining Time: </p>
+									</td>
+									<td>
+										<p id="remainingTime">
+											<span id="hours">00</span>:
+											<span id="minutes">00</span>:
+											<span id="seconds">00</span>
+										</p>
+									</td>
+								  </tr>
+								  <tr>
+									<td>
+										<p id="buyerTickets">Tickets with you: </p>
+									</td>
+									<td>
+										<p><span id="ticketCount"></span></p>
+									</td>
+								  </tr>
+								  <tr>
+									<td><p>Winner Tokens: </p></td>
+									<td><p><span id="winnerTokens"></span></p></td>
+								  </tr>
+								  
+								</table>
+								<button class="btn_active button-85" onclick="buyTickets()">Buy Tickets</button>
+								
+								<button class="btn_active button-49" onclick="withdrawWinnings()" id="withdrawButton" style="display:none;">Withdraw Winnings</button>
+								
 							</div>
 						</div>
 						<div class="col_4-12">
