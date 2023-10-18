@@ -57,32 +57,37 @@ p{
 	padding:0;
 	background-color: transparent!important;
 	justify-content: flex-start;
-	height: 104px;
     background-color: #000000;
-    overflow: hidden;
 	z-index: 999;
+	align-items: center;
 }
 .navbar_expand .navbar_brand{
-	display: none;
 	font-size: inherit;
     line-height: 1;
     padding: 0;
-}
-.navbar_expand .navbar_toggler{
+	width: 20%;
 	display: none;
-	cursor: pointer;
 }
+.navbar_expand .navbar_brand img{
+	width: 100%;
+	transform: scale(1.8);
+}
+
 .nav_div_1{
 	width: 40%;
+	z-index: 300;
 }
 .nav_div_2{
 	width: 15%;
+	z-index: 200;
 }
 .nav_div_3{
 	width: 25%;
+	z-index: 300;
 }
 .nav_div_4{
 	width: 20%;
+	z-index: 300;
 }
 .navbar_collapse{
 	display: flex;
@@ -177,13 +182,27 @@ p{
 	opacity:1;
 	transform: scaleX(1);
 }
-
+.navbar_expand #menuBar{
+	display: none;
+}
+.navbar_expand label{
+	font-size: 20px;
+	color: #ffffff;
+	cursor: pointer;
+	display: none;
+}
 .burger_menu{
 	font-size: 25px;
     display: block;
 	line-height: 1.5;
 	font-weight: 400;
 	cursor: pointer;
+}
+.burger_menu .top_bar, .burger_menu .middle_bar, .burger_menu .bottom_bar{
+	width: 50px;
+	height: 10px;
+	background: #fff;
+	z-index: 500;
 }
 
 .navbar_nav_item a {
@@ -208,13 +227,32 @@ p{
 	transform-origin: 1 100%; 
 	transition: transform 0.3s ease; 
 }
-
-
-.navbar_nav_item a:hover::after {
-    transform: scaleX(0.7);
+.navbar_nav_item .navDropDown{
+	margin-top: 20px;
+	position: absolute;
+	left: 0;
+	width: max-content;
+	background: #140c2d;
+	padding: 0.5em;
+	display: none;
 }
+.navbar_nav_item .navDropDown li{
+	width: 100%;
+	display: flex;
+    flex-direction: row;
+	margin: 2em 1em;
+
+}
+.navbar_nav_item a:hover::after {
+    transform: scaleX(0.8);
+}
+.navbar_nav_item a:focus-within > .navDropDown,
+.navbar_nav_item a:hover > .navDropDown{
+	display: initial;
+}
+
 .banner_area{
-	background-image: url('../images/banner-bg-2.jpg');
+	background-image: url('../images/banner/b1.jpg');
 	box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.4);
 	z-index: 1;
     position: relative;
@@ -471,7 +509,7 @@ p{
 	box-sizing: border-box;
 	
 }
-.about_area{
+.about_area, .utility_area{
 	position: relative;
 	background-color: #170f32;
 	padding-top: 120px;
@@ -621,6 +659,53 @@ p{
 	font-size: 14px;
 	cursor: pointer;
 }	
+
+/*utility*/
+.utility_area .utilityBoxContainer{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+	gap: 5rem;
+}
+
+.utility_area .utilityBoxContainer .utilityBox{
+	padding: 3rem 2rem;
+	background: #140c2d;
+	outline: .1rem solid rgba(0,0,0,0.1);
+	outline-offset: -1rem;
+	box-shadow: .5rem 1.5rem rgba(0,0,0,0.1);
+	text-align: center;
+	background: #140c2d;
+    display: flex;
+	margin: 3rem;
+	
+}
+
+
+.utility_area .utilityBoxContainer .utilityBox:hover{
+	box-shadow: 1px 1px 10px 4px #fff;
+}
+.utility_area .utilityBoxContainer .utilityBox .utilityBoxIcon{
+	width: 100%;
+    height: fit-content;
+	position: relative;
+    top: 25%;
+    left: -20%;
+}
+.utility_area .utilityBoxContainer .utilityBox .utilityBoxIcon img{
+	width: 100%;
+    border-radius: 50%;
+}
+.utility_area .utilityBoxContainer .utilityBox .utilityBoxContent{
+	text-align: left;
+	margin-left: -2rem;
+}
+.utility_area .utilityBoxContainer .utilityBox .utilityBoxContent .read_more{
+	display: none;
+}
+.utility_area .utilityBoxContainer .utilityBox.un{
+	width: 33%;
+	margin: 0 30%;
+}
 
 /* how it works */	
 
@@ -1238,9 +1323,67 @@ p{
 }
 
 /*Responsive code*/
+@media only screen and (min-width: 450px) and (max-width: 991px)
+{
+	.navbar_expand{
+		justify-content: space-between;
+		
+	}
+	.navbar_expand label{
+		display: initial;
+	}
+	.navbar_expand .navbar_collapse{
+		position: absolute;
+		top: 0;
+		right: 0;
+		border-top: 1px solid rgba(255,255,255,0.1);
+		justify-content: space-evenly;
+		display: inline;
+		margin: 8% 0;
+		background: #140c2d;
+		display: none;
+	}
+	.navbar_expand .navbar_collapse .nav_div_1{
+		margin-bottom: -2em;
+	}
+	.navbar_expand .navbar_collapse .nav_div_3{
+		margin-bottom: -3.5em;
+	}
+	.navbar_expand .navbar_collapse .nav_div_2, .navbar_expand .navbar_collapse .nav_div_4{
+		display: none!important;
+		
+	}
+	.navbar_expand .navbar_collapse div ul{
+		flex-direction: column;
+		
+	}
+	.navbar_nav_item{
+		width: max-content;
+		width: 20em;
+		border-bottom: 1px solid rgba(255,255,255,0.1);
+	}
+	.navbar_nav_item a{
+		width: 100%;
+		text-align: left;
+	}
+	.navbar_expand .navbar_brand{
+		display: initial;
+	}
+	.navbar_nav_item .navDropDown{
+		position: relative;
+	}
+	.navbar_nav_item .dropdownLink{
+		margin-left: 0;
+		background: #2a2145;
+	}
+	#menuBar:checked ~ .navbar_collapse{
+		display: initial;
+	}
+	
+}
 @media only screen and (min-width: 992px) and (max-width: 1199px)
 {
-	.single-features.style-two[_ngcontent-ng-c4169024703] img[_ngcontent-ng-c4169024703] {
+	.single-features.style-two img {
 		max-width: 100%;
 		margin-bottom: 25px;
 	}
@@ -1251,9 +1394,7 @@ p{
 	body{
 		font-size: 14px;
 	}
-	.navbar_container, .app_container {
-		max-width: 720px
-	}
+	
 	.navbar_area {
 		padding-top: 12px;
 		padding-bottom: 12px;
@@ -1272,6 +1413,11 @@ p{
         display: block;
         text-align: left;
     }
+}
+
+/*Mobile*/
+@media screen and (max-width: 575px){
+	
 }
 
 /*animation*/
