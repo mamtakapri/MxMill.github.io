@@ -585,6 +585,10 @@ p{
 .i_disc img{
 	width: 18px;
 }
+
+
+/*******Key-Features*******/
+
 .key_features{
 	display: block;
 	box-sizing: border-box;
@@ -658,6 +662,9 @@ p{
 .read_more{
 	font-size: 14px;
 	cursor: pointer;
+}
+.feature_container .boxes .box_row .box .btn_hide{
+	visibility: hidden;
 }	
 
 /*utility*/
@@ -785,6 +792,7 @@ p{
 	max-width: 1050px;
     margin-left: auto;
     margin-right: auto;
+	min-height: 25vh;
 }
 .content_row{
     display: flex!important;
@@ -807,12 +815,13 @@ p{
     width: 58.33333333%;
 	float: left;
 }
-.row_7-12 .work_content {
+.col_7-12 .work_content {
     color: #beb8cc;
     font-size: 16px;
     margin-bottom: 15px;
     line-height: 1.8rem;
 }
+
 #tab2, #tab3{
 	display: none;
 }
@@ -820,11 +829,18 @@ p{
 	box-sizing: border-box;
 }
 .token_area {
-    position: relative;
     z-index: 1;
 	background-color: #140c2d73;
 	padding-top: 120px;
     padding-bottom: 120px;
+}
+.token_area .app_container .content_row{
+	display: grid!important;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 3%
+}
+.tokenItem{
+	
 }
 
 .col_6-12{
@@ -842,6 +858,9 @@ p{
     max-width: 100%;
     height: auto;
 
+}
+.token_img img{
+	transform: scale(0.8);
 }
 .single_token_list{
 	background: rgba(255,255,255,.2);
@@ -1320,20 +1339,24 @@ p{
     margin-bottom: 15px;
     scroll-snap-type: x mandatory;
   }
-  .rd_slider-wrapper .rd_image-list .rd_image-item {
+  /*.rd_slider-wrapper .rd_image-list .rd_image-item {
     width: 280px;
     height: 380px;
   }
   .rd_slider-scrollbar .rd_scrollbar-thumb {
     width: 20%;
-  }
+  }*/
 }
 
 /*Responsive code*/
-@media only screen and (min-width: 450px) and (max-width: 991px)
+@media only screen and (max-width: 991px)
 {
 	body{
-		font-size: 14px;
+		font-size: 18px;
+	}
+	.top_title{
+		font-size: 1rem;
+		text-transform: uppercase;
 	}
 	
 	.navbar_area {
@@ -1394,13 +1417,13 @@ p{
 	#menuBar:checked ~ .navbar_collapse{
 		display: initial;
 	}
-	/*About Us*/
+	
+	
+	/********About Us***********/
 	.title_head{
 		font-size: 35px;
 	}
-	.about_row{
-		
-	}
+	
 	.about_img_container, .about_content_container{
 		width: 60%;
 		margin-left: auto;
@@ -1415,9 +1438,94 @@ p{
 		font-size: 18px;
 	}
 	
+	/*******Key-Features************/
+	.feature_container .boxes .box_row{
+		flex-direction: column;
+	}
+	.feature_container .boxes .box_row .box{
+		width: 90%;
+		border-radius: 10px 100px;
+		margin-left: auto;
+		margin-right: auto;
+		min-height: 125px;
+	}
+	.feature_container .boxes .box_row .box .insideBox2{
+		visibility: hidden;
+		height: 0px;
+		margin: 0;
+	}
+	.feature_container .boxes .box_row .box .insideBox1 h3{
+		font-size: 1.2em;
+	}
+	.feature_container .boxes .box_row .box .read_more{
+		float: right;
+		margin-right: 5%;
+	}
+	.feature_container .boxes .box_row .box .btn_hide{
+		visibility: visible;
+	}
+	
+	/********Utility**********/
+	.utility_area .utilityBoxContainer .utilityBox{
+		align-items: center;
+	}
+	.utility_area .utilityBoxContainer .utilityBox .utilityBoxIcon{
+		top: initial;
+		left: initial;
+	}
+	.utility_area .utilityBoxContainer .utilityBox .utilityBoxIcon img{
+		transform: scale(0.5);
+	}
+	.utility_area .utilityBoxContainer .utilityBox.un{
+		margin: auto;
+		width: 81.5%;
+	}
+	.utility_area .utilityBoxContainer .utilityBox .utilityBoxContent .utilityBoxHead{
+		font-size: 2rem;
+		
+	}
+	.utility_area .utilityBoxContainer .utilityBox .utilityBoxContent .utilityBoxSubHead{
+		font-size: 1.5rem;
+		color: #e0e0e0;
+	}
+	.utility_area .utilityBoxContainer .utilityBox .utilityBoxContent .utilityBoxPara{
+		font-size: 1rem;
+	}
+	
+	/***********how it works(metaverse ecosystem)*************/
+	.col_7-12 .work_content{
+		line-height: 1.3rem;
+	}
+	
+	/**********Token**********/
+	.token_area .app_container .content_row{
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.token_img{
+		padding: 40px 10px;
+		max-width: 95%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 2rem;
+	}
+	.token_img img{
+		transform: scale(100%);
+	}
+	.token_content{
+		font-size: 14px;
+	}
+	
+	/**********Stake Now*********/
+	
+	.stake_bg .content_row .stake_content p{
+		display: none;
+	}
+	
+	
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px)
 {
+	
 	.single-features.style-two img {
 		max-width: 100%;
 		margin-bottom: 25px;
@@ -1438,7 +1546,297 @@ p{
 }
 
 /*Mobile*/
-@media screen and (max-width: 575px){
+@media only screen and (max-width: 600px){
+	body{
+		font-size: 10px;
+	}
+	.top_title{
+		font-size: 10px;
+	}
+	.title_head{
+		font-size: 18px;
+	}
+	/**********Banner***********/
+	.app_container{
+		margin: 0;
+	}
+	.banner_area{
+		padding-top: 100px;
+		padding-bottom: 150px;
+	}
+	.banner_content{
+		max-width: 100%;
+		margin: 0;
+		font-size: 14px;
+	}
+	.banner_content .banner_heading{
+		padding: 0;
+		line-height: 1.2;
+		margin-bottom: 15px;
+	}
+	.banner_content .banner_heading span{
+		font-size: 14px;
+	}
+	.banner_btn {
+		margin-top: 15px;
+	}
+	.default_btn, .btn_active, .connect_btn{
+		margin-left: 5px;
+		margin-top: 10px;
+		margin-right: 5px;
+		font-size: 10px;
+		padding: 10px 18px;
+		overflow: hidden;
+	}
+	
+	/***********Partner*************/
+	.partner_wrap{
+		padding: 30px 25px;
+		margin-top: -30px;
+	}
+	.slider{
+		height: 60px;
+		margin-top: 50px;
+		padding: 0px 0px 0px 50px;
+		margin-left: -25px;
+	}
+	.slide-track{
+		width: calc(100px*18);
+		margin-left: -50px;
+	}
+	.slide{
+		height: auto;
+		width: auto;
+		padding: 0 20px;
+		margin: -30px;
+	}
+	
+	/*********About-Us**********/
+	.about_area, .feature_area, .utility_area, .how_it_work_area, .token_area, .roadmap_area, .what_get_area, .stake_area, .footer_area{
+		padding: 40px 0px 0px!important;		
+	}
+	.feature_area{margin-top: 50px;}
+	.about_row{
+		margin: 0;
+		flex-direction: column-reverse;
+
+	}
+	.about_img_container, .about_content_container {
+		width: 100%;
+	}
+	.about_para {
+		font-size: 10px;
+	}
+	.about_social .social{
+		margin-right: 2px;
+		float: left;
+	}
+	.soc_icon{
+		width: 26px;
+		height: 26px;
+		line-height: 28px
+	}
+	.about_img img{
+		margin-top: 70px;
+	}
+	
+	/*********Features**********/
+	.feature_area .boxes .box_row .box{
+		margin: 0;
+		border-radius: 10px;
+		padding: 20px 15px;
+		margin-bottom: 25px;
+	}
+	.feature_area .boxes .box_row .box .insideBox1{
+		flex-direction: column;
+		padding: 0 10px;
+	}
+	.feature_area .boxes .box_row .box .insideBox1 img{
+		width: 45px;
+	}
+	.feature_area .boxes .box_row .box .insideBox1 h3{
+		font-size: 0.8rem;
+	}
+	.feature_area .boxes .box_row .box .read_more{
+		float: none;
+	}
+	.insideBox2_inv p{
+		font-size: 12px;
+		text-align: center;
+	}
+	
+	
+	/*********Utility***********/
+	.utility_area .utilityBoxContainer{
+		grid-template-columns: repeat(1,1fr);
+		gap: 1rem;
+	}
+	.utility_area .utilityBoxContainer .utilityBox {
+		margin: 0;
+		padding: 15px;;
+		flex-direction: column;
+	}
+	.utility_area .utilityBoxContainer .utilityBox .utilityBoxContent{
+		text-align: center;
+		width: 100%;
+		margin: 0;
+		background: #47bdd430;
+		padding: 15px 0;
+	}
+	.utility_area .utilityBoxContainer .utilityBox .utilityBoxContent .utilityBoxHead{
+		font-size: 12px;
+		font-weight: 800;
+	}
+	.utility_area .utilityBoxContainer .utilityBox .utilityBoxContent .utilityBoxSubHead{
+		font-size: 16px;
+	}
+	.utility_area .utilityBoxContainer .utilityBox .utilityBoxContent .utilityBoxPara{
+		font-size: 12px;
+	}
+	
+	.utility_area .utilityBoxContainer .utilityBox .utilityBoxIcon{
+		margin-bottom: -20px;
+	}
+	.utility_area .utilityBoxContainer .utilityBox .utilityBoxIcon img{
+		width: 50px;
+		transform: scale(1);
+	}
+	
+	/************Metaverse Ecosystem**************/
+	.how_it_work_tabs .nav_tabset{
+		margin-bottom: 20px;
+	}
+	.how_it_work_tabs .nav_tabset .nav_tab span{
+		padding: 10px 15px;
+		font-size: 10px;
+		border-radius: 1px;
+	}
+	.how_it_work_tabs .nav_tabset .nav_tab span:before, .how_it_work_tabs .nav_tabset .nav_tab span:after{
+		border-radius: 5px;
+	}
+	.work_row{
+		display: flex;
+		flex-direction: column;
+	}
+	.work_row .col_5-12, .work_row .col_7-12{
+		width: 100%;
+	}
+	.how_it_work_tabs .tab_img img{
+		border-radius: 25px;
+	}
+	.how_it_work_tabs .tab_content{
+		width: 100%;
+	}
+	.work_row .col_5-12 h3{
+		font-size: 13px;
+	}
+	.work_row .col_7-12 p{
+		font-size: 12px;
+	}
+	
+	/********Token*********/
+	
+	.token_img img{
+		width: 90%;
+		margin: 0 5%;
+		height: auto;
+	}
+	.token_area .app_container .content_row{
+		width: 100%;
+		place-items: center;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.single_token_list .token_list_content .li_lt{
+		padding-right: 5px;
+	}
+	.single_token_list{
+		max-height: 60px;
+	}
+	.token_content{
+		font-size: 10px;
+	}
+	.single_token_list .token_list_content li h4{
+		font-size: 12px;
+	}
+	.single_token_list .token_list_content li h4 sub{
+		font-size: 10px;
+	}
+	/***********Road Map*************/
+	.roadmap_area{
+		padding: 20px 0 0;
+	}
+	.rd_slider-wrapper .rd_image-list .rd_image-item .single_rd{
+		padding: 15px;
+		margin-bottom: 10px;
+	}
+	.rd_slider-wrapper .rd_image-list .rd_image-item .single_rd ul li:before{
+		top: 0;
+		width: 5px;
+		height: 5px
+	}
+	.rd_slider-wrapper .rd_image-list .rd_image-item .single_rd .date_rd{
+		padding: 8px 16px;
+		border-radius: 20px;
+	}
+	.rd_slider-wrapper .rd_image-list .rd_image-item .single_rd .date_rd h2{
+		font-size: 20px;
+	}
+	
+	/**********What get area************/
+	.what_get_area .app_container .content_row {
+		flex-direction: column;
+		align-items: center;
+	}
+	.what_get_area .app_container .content_row .col_6-12{
+		width: 90%;
+		margin: 2%;
+	}
+	.rd_slider-wrapper .rd_image-list .rd_image-item {
+		height: auto;
+	}
+	
+	/*********Stakes***********/
+	.stake_row{
+		flex-direction: column;
+		align-items: center;
+	}
+	.stake_bg{
+		width: 90%;
+	}
+	.stake_content h2{
+		font-size: 18px;
+	}
+	
+	/**************Footer*****************/
+	.footer_area .app_container .content_row{
+		display: flex;
+		flex-direction: column;
+	}
+	.footer_area .app_container .content_row .col_5-12{
+		width: 100%;
+	}
+	.single_footer ul{
+		display: flex;
+		justify-content: space-between;
+	}
+	.single_footer ul li a, .single_footer ul li span{
+		font-size: 10px;
+	}
+	.single_footer ul li, .single_footer .social_link li{
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	/************Copyright*****************/
+	.copyright_area{
+		padding-top: 5px;
+		padding-bottom: 5px
+	}
+	.copyright_area p{
+		font-size: 9px;
+	}
+	
 	
 }
 
