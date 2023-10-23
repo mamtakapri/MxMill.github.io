@@ -241,7 +241,7 @@ p{
 	display: flex;
     flex-direction: row;
 	margin: 2em 1em;
-
+    word-spacing: 0.2rem;
 }
 .navbar_nav_item a:hover::after {
     transform: scaleX(0.8);
@@ -548,6 +548,7 @@ p{
     -webkit-text-fill-color: transparent;
     background-clip: text;
     font-weight: 600;
+	text-transform: uppercase;
 }
 .title_head{
 	font-family: fantasy;
@@ -677,24 +678,24 @@ p{
 }
 
 .utility_area .utilityBoxContainer .utilityBox{
-	padding: 3rem 2rem;
+	padding: 0rem 2rem;
 	background: #140c2d;
 	outline: .1rem solid rgba(0,0,0,0.1);
 	outline-offset: -1rem;
 	box-shadow: .5rem 1.5rem rgba(0,0,0,0.1);
 	text-align: center;
 	background: #140c2d;
-    display: flex;
+    display: inline-block;
 	margin: 3rem;
 	
 }
 
 
 .utility_area .utilityBoxContainer .utilityBox:hover{
-	box-shadow: 1px 1px 10px 4px #fff;
+	box-shadow: 1px 1px 10px 4px #4948ac;
 }
 .utility_area .utilityBoxContainer .utilityBox .utilityBoxIcon{
-	width: 100%;
+	width: 100px;
     height: fit-content;
 	position: relative;
     top: 25%;
@@ -702,15 +703,19 @@ p{
 }
 .utility_area .utilityBoxContainer .utilityBox .utilityBoxIcon img{
 	width: 100%;
-    border-radius: 50%;
+    
 }
 .utility_area .utilityBoxContainer .utilityBox .utilityBoxContent{
 	text-align: left;
-	margin-left: -2rem;
+	margin-left: 20%;
 }
 .utility_area .utilityBoxContainer .utilityBox .utilityBoxContent h1{
 	font-size: 1.4em;
 	letter-spacing: 0.08rem;
+	background: linear-gradient(135deg,#57F0FA 0%,#712AF9 100%);
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 .utility_area .utilityBoxContainer .utilityBox .utilityBoxContent span{
 	letter-spacing: .05rem;
@@ -796,11 +801,14 @@ p{
 	margin-bottom: 50px;
     border-radius: 65px;
     text-align: center;
+	background-image: radial-gradient( rgb(3 128 255 / 28%), rgb(255 0 199 / 24%));
 }
 
 .how_it_work_tabs .tab_img img{
 	width: 100%;
 	border-radius: 65px;
+	position: relative;
+	z-index: -1;
 }
 
 .how_it_work_tabs .tab_content{
@@ -865,17 +873,18 @@ p{
 }
 .token_img{
 	padding: 20px 0;
-	background: rgba(255,255,255,.2);
+	background: #474642;
     -webkit-backdrop-filter: blur(134px);
     backdrop-filter: blur(134px);
     border-radius: 30px;
     text-align: center;
-    max-width: 100%;
+    width: 100%;
     height: auto;
 
 }
 .token_img img{
-	transform: scale(0.8);
+	width:100%;
+	transform: scale(100%);
 }
 .single_token_list{
 	background: rgba(255,255,255,.2);
@@ -1113,7 +1122,8 @@ p{
     text-align: center;
     margin-bottom: 30px;
     border-radius: 45px;
-    transition: 0.5s;
+    transition: 1s;
+	height: 350px;
 }
 .single_what_get:before {
     top: 0;
@@ -1129,7 +1139,7 @@ p{
 .single_what_get img{
 	max-width: 100%;
 	height: auto;
-	vertical-align: mmiddle;
+	vertical-align: middle;
 }
 .single_what_get .what_get_main{
 	left: 0;
@@ -1143,7 +1153,7 @@ p{
 }
 .single_what_get {
     font-size: 24px;
-    margin-bottom: 0;
+    
 }
 .single_what_get .what_get_hover{
     top: -100%;
@@ -1183,7 +1193,7 @@ p{
 .single_what_get.color_st_2 .what_get_hover {
     background: linear-gradient(180deg,rgba(253,206,57,.9) 0%,rgba(253,137,99,.9) 30.21%,rgba(237,81,116,.9) 100%);
 }
-.what_get_area .anim_page_star{
+.anim_page_star{
 	top: 100px;
     right: 200px;
     position: absolute;
@@ -1217,7 +1227,7 @@ p{
     margin: 10px
 }
 .stake_bg .content_row{
-	align-items: flex-end!important;
+	align-items: center;
 }
 
 .col_8-12{
@@ -1236,7 +1246,7 @@ p{
 	font-size: 13px;
 }
 .stake_img img{
-	width: 80%;
+	width: 100%;
 }
 .stake_content h2{
 	font-size: 35px;
@@ -1251,11 +1261,18 @@ p{
 .stake_content a{
 	margin-top: 15px;
 }
+.stakePopup{
+	display: absolute;
+	height: 100%;
+	width: 100%;
+	background: rgba(0,0,0,0.5);
+}
 .stake_bg .anim_page_star{
 	right: 0;
     left: 200px;
     z-index: -1;
     margin: auto;
+	z-index: 10;
     bottom: 100px;
     position: absolute;
     animation: rotation 30s infinite linear;
@@ -1265,7 +1282,6 @@ p{
 .footer_area{
 	border-top: 1px solid rgba(255,255,255,.04);
     background-color: #140c2d73;
-    position: relative;
     z-index: 1;
     padding-top: 150px;
     padding-bottom: 120px;
@@ -1489,7 +1505,7 @@ p{
 		left: initial;
 	}
 	.utility_area .utilityBoxContainer .utilityBox .utilityBoxIcon img{
-		transform: scale(0.5);
+		transform: scale(1.5);
 	}
 	.utility_area .utilityBoxContainer .utilityBox.un{
 		margin: auto;
@@ -1547,9 +1563,11 @@ p{
 	}
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px)
+@media only screen and (max-width: 1182px)
 {
-	
+	.utility_area .utilityBoxContainer .utilityBox .utilityBoxIcon img {
+		margin-left: 100%;
+	}
 }
 
 
@@ -1567,6 +1585,7 @@ p{
 	}
 	.top_title{
 		font-size: 10px;
+		text-transform: uppercase;
 	}
 	.title_head{
 		font-size: 18px;
@@ -1652,7 +1671,7 @@ p{
 		line-height: 28px
 	}
 	.about_img img{
-		margin-top: 70px;
+		margin-top: 85px;
 	}
 	
 	/*********Features**********/
@@ -1711,10 +1730,13 @@ p{
 	
 	.utility_area .utilityBoxContainer .utilityBox .utilityBoxIcon{
 		margin-bottom: -20px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 	.utility_area .utilityBoxContainer .utilityBox .utilityBoxIcon img{
 		width: 50px;
 		transform: scale(1);
+		margin-left: 0;
 	}
 	
 	/************Metaverse Ecosystem**************/

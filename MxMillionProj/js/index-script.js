@@ -1,8 +1,3 @@
-$(".carousel").owlCarousel({
-	items:5
-});
-
-
 const initSlider = () => {
     const imageList = document.querySelector(".rd_slider-wrapper .rd_image-list");
     const slideButtons = document.querySelectorAll(".rd_slider-wrapper .rd_slide-button");
@@ -94,5 +89,4 @@ function toggleTabs(id){
 		$("#tab1").hide();
 	}
 }
-
 
