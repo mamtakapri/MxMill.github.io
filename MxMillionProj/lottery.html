@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--owl-carousel-->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.css">
+	
+	<!--font awesome-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<!--Material symbols-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+	<!-- custom css -->
+    <link rel="stylesheet" href="css/index-style.css">
+    <link rel="stylesheet" href="css/lottery.css">
+    <!-- Fav Icon  -->
+    <!-- Site Title  -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="css/sky.css?ver=1930" id="changeTheme">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+	
+    <title>Mx Million Lottery</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+<!--Navigation Section-->
+<div class="app_navbar navbar_sticky">
+	<div class="navbar_area">
+		<div class="navbar_container">
+			<div class="navbar navbar_expand">
+				<a class="navbar_brand" href="#home">
+					<img src="images/logo/logo1.png" alt="logo" />
+				</a>
+				
+				<input type="checkbox" id="menuBar">
+					<label for="menuBar">
+						<i class="fa fa-bars"></i>
+					</label>
+				<div class="navbar_collapse">
+					<div class="nav_div_1">
+						<ul class="navbar_nav">
+							<li class="navbar_nav_item">
+								<a href="index.html">Home</a>
+								<ul></ul>
+							</li>
+							<li class="navbar_nav_item">
+								<a href="#aboutUs">About Us</a>
+							</li>
+							<li class="navbar_nav_item">
+								<a href="#features">Features</i></a>
+								<ul></ul>
+							</li>
+							<li class="navbar_nav_item" id="navItem" >
+								<a href="#projects" class="dropdownLink">Projects <i class="fas fa-angle-down"></i>
+									<ul class="navDropDown">
+										<li>Metaverse City</li>
+										<li>NFT Marketplace</li>
+										<li>Play2Earn Games</li>
+										<li>3D Billboards</li>
+										<li>Virtual Event Platform</li>
+										<li>Farm to Fortune</li>
+									</ul>
+								</a>
+								
+							</li>
+							
+						</ul>
+					</div>
+					<div class="nav_div_2">
+						<a href="index.html" class="navbar_logo_center">
+							<img src="images/logo/logo1.png" alt="logo"  />
+						</a>
+					</div>
+					<div class="nav_div_3">
+						<ul class="navbar_nav">
+							<li class="navbar_nav_item">
+								<a href="#earn" class="dropdownLink">Earn <i class="fas fa-angle-down"></i>
+									<ul class="navDropDown">
+										<li>NFT Staking</li>
+										<li>Referral Income</li>
+										<li>Lottery</li>
+										<li>DAO Voting</li>
+										<li>MXMDAO Token</li>
+									</ul>
+								</a>
+								
+							</li>
+							<li class="navbar_nav_item">
+								<a href="#dao">DAO</a>
+								<ul>
+								</ul>
+							</li>
+							<li class="navbar_nav_item">
+								<a href="#contactUs">Contact Us</a>
+								<ul></ul>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<ul class="navbar_nav nav_responsive">
+							<li></li>
+						</ul>
+					</div>
+					<div class="nav_other_option nav_div_4">
+						<div class="nav_option_item">
+							<a class="btn_active" href="#contactUs" >
+								Log In
+							</a>
+						</div>
+						<div class="nav_option_item">
+							<span class="burger_menu">
+								<i class="fas fa-bars"></i>
+							</span>
+						</div>
+					</div>
+			
+				
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--Stake-Section-->
+<div>
+<div class="lotteryContainer">
+    <h1 class="lottery_head">Mx Million Metaverse DAO Lottery Contest</h1>
+	<h1 class="lottery_head">Ticket Price 5000 Coins</h1><hr>
+	<img class="celAnim" src="animation/celebrate2.gif" alt="celebrate">
+	<img width="30%" src="images/stake/lOTTERY-removebg-preview.png" alt="Lottery">
+	<img class="celAnim" src="animation/celebrate2.gif" alt="celebrate">
+    <hr>
+     <p>Lottery Address : <a style="color: yellow;" href="https://bscscan.com/address/0x25b3B43557953E4422C7018843c7Da37F9124A0f#code" target="_blank">0x25b3B43557953E4422C7018843c7Da37F9124A0f</a></p>
+    <hr>
+    <p id="message"></p>
+    <p>Last Winner Address: <br><span id="lastWinnerAddress"></span></p>
+    <p>
+      Remaining Time: 
+    </p>
+    <p id="remainingTime">
+    <span id="hours">00</span>:
+    <span id="minutes">00</span>:
+    <span id="seconds">00</span>
+    </p>
+    <p id="buyerTickets">Tickets with you: <span id="ticketCount"></span></p>
+    <p>Winner Tokens: <span id="winnerTokens"></span></p>
+    <hr>
+    <button class="button-85" onclick="buyTickets()">Buy Tickets</button>
+    <hr>
+	<h1>Mx Million Metaverse Dao Lottery</h1>
+</div>
+	<center><button class="button-49" onclick="withdrawWinnings()" id="withdrawButton" style="display: none;">Withdraw Winnings</button></center>
+    <hr>
+  </div>
+
+
+<!--Footer Section-->
+<div class="footer_section">
+	<div class="footer_area">
+		<div class="app_container">
+			<div class="content_row">
+				<div class="col_5-12">
+					<div class="single_footer">
+						<ul>
+							<li>
+								<a href="#about-us">About Us</a>
+							</li>
+							<li>
+								<a href="#projects">Ecosystem</a>
+							</li>
+							<li>
+								<a href="#project-details">Projects</a>
+							</li>
+							<li>
+								<a href="#blogs">Roadmap</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col_2-12">
+					<div class="single_footer logo">
+					<img src="images/logo/Untitled__3_-removebg-preview.png" alt="logo" />
+						<a href="index.html">
+							
+						</a>
+					</div>
+				</div>
+				<div class="col_5-12">
+					<div class="single_footer">
+						<ul class="social_link">
+							<li>
+								<span>Follow Us On:</span>
+							</li>
+							<li>
+								<a href="#facebook">
+									<img src="images/icon/social-media/icon-8-fb.svg" alt="facebook" />
+									 <span>Facebook </span>
+								</a>
+							</li>
+							<li>
+								<a href="#twitter">
+									<img src="images/icon/social-media/icon-9-tw.svg" alt="twitter" />
+									<span>Twitter</span>
+								</a>
+							</li>
+							<li>
+								<a href="#instagram">
+									<img src="images/icon/social-media/icon-12-insta.svg" alt="instagram" />
+									<span>Instagram</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="copyright_area">
+		<div class="app_container">
+			<p>
+				<i class="fa-regular fa-copyright"></i>
+				 MxMillion is Proudly Owned by 
+				 <a href="#company">Mx Million Foundation</a>
+			</p>
+		</div>
+	</div>
+</div>
+
+<script>
+         // Disable right-click on the page
+        document.addEventListener('contextmenu', function(event) {
+            event.preventDefault();
+        });
+
+        // Detect if developer tools are open
+        var devtoolsOpen = false;
+        function checkDevTools() {
+            if (devtoolsOpen || window.outerWidth - window.innerWidth > 200 || window.outerHeight - window.innerHeight > 200) {
+                devtoolsOpen = true;
+                console.log("Developer tools detected!");
+                // You can display a warning message or redirect to another page.
+                // For example:
+                document.body.innerHTML = '<h1>Unauthorized Access Detected</h1><p>Please do not use the developer tools to inspect this page.</p>';
+            }
+        }
+        setInterval(checkDevTools, 1000); // Check every second
+
+        // Optional: Disable keyboard shortcuts (e.g., Ctrl+Shift+I) to open developer tools
+        document.onkeydown = function(e) {
+            if (event.ctrlKey && event.shiftKey && event.keyCode == 73) {
+                return false;
+            }
+        };
+ 	document.addEventListener('DOMContentLoaded', function() {
+    const openWalletButton = document.getElementById('openWalletButton');
+    const walletOptions = document.getElementById('walletOptions');
+    const metamaskOption = document.getElementById('metamaskOption');
+    const trustWalletOption = document.getElementById('trustWalletOption');
+
+    openWalletButton.addEventListener('click', function() {
+        walletOptions.style.display = 'block';
+    });
+
+    metamaskOption.addEventListener('click', function() {
+        // Open MetaMask link
+        window.open('https://metamask.app.link/dapp/demo.gamedevo.click/');
+        walletOptions.style.display = 'none';
+    });
+
+    trustWalletOption.addEventListener('click', function() {
+        // Open Trust Wallet link
+        window.open('https://link.trustwallet.com/open_url?coin_id=20000714&url=https://demo.gamedevo.click/');
+        walletOptions.style.display = 'none';
+    });
+});
+
+    </script>
+ 
+      <script src="protected.php?file=web3.min.js"></script>
+    <script src="protected.php?file=app.js"></script>
+
+
+<body>
+</html>
